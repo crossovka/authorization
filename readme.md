@@ -1,4 +1,4 @@
-﻿# project management system for web agency
+﻿# Fullstack authorization
 
 ## Описание
 Fullstack система авториации.
