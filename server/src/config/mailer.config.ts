@@ -9,7 +9,9 @@ export const getMailerConfig = async (
 	transport: {
 		host: configService.getOrThrow<string>('MAIL_HOST'),
 		port: configService.getOrThrow<number>('MAIL_PORT'),
-		secure: !isDev(configService),
+		// если ты запускаешь в dev, то secure будет false, а должен быть true для 465.
+		// secure: !isDev(configService),
+		secure: true,
 		auth: {
 			user: configService.getOrThrow<string>('MAIL_LOGIN'),
 			pass: configService.getOrThrow<string>('MAIL_PASSWORD')
