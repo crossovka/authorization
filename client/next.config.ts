@@ -2,6 +2,11 @@
 const nextConfig = {
 	experimental: {
 		missingSuspenseWithCSRBailout: false,
+		allowedDevOrigins: [
+			'https://accounts.google.com',
+			'https://oauth.yandex.ru',
+			'https://passport.yandex.ru',
+		],
 	},
 	env: {
 		SERVER_URL: process.env.SERVER_URL,
